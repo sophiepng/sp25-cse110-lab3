@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Meeting Minutes for Pomodoro Timer Brainstorm" />
+    <title>Pomodoro Timer First Brainstorm - Meeting Minutes</title>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+      <h2>Topic: Brainstorming</h2>
+      <h3>Date: April 15, 2025</h3>
+      <nav>
+        <ul>
+          <li><a href="#attendance">Attendance</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#old-business">Unfinished Business</a></li>
+          <li><a href="#new-business">New Business</a></li>
+          <li><a href="#misc">Miscellaneous</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#form">Feedback Form</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li><strong>John Doe</strong> (Team Lead)</li>
+          <li>Jane Smith</li>
+          <li><em>Sophie Phung</em></li>
+          <li>Karen Lee</li>
+        </ul>
+      </section>
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Discuss features of the Pomodoro timer</li>
+          <li>Assign initial tasks</li>
+          <li>Setup GitHub repository</li>
+        </ol>
+      </section>
+
+      <section id="old-business">
+        <h2>Old Business</h2>
+        <p>Finalize scope of product.</p>
+      </section>
+
+      <section id="new-business">
+        <h2>New Business</h2>
+        <p>
+          We decided to use <b>local storage</b>.
+          Also discussed possible integration with <i>Google Calendar</i>.
+        </p>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <p>Dark mode version? — John</p>
+        <p>API for motivational quotes? — Karen.</p>
+        <details>
+          <summary>Click to reveal Jane's quote of the day</summary>
+          <p><q>Start early, start often!</q></p>
+        </details>
+      </section>
+
+      <section id="media">
+        <h2>Diagrams & Media</h2>
+        <figure>
+          <img src="picture.png" alt="Sketch of Pomodoro timer structure" width="400" />
+          <figcaption>Initial architecture diagram sketched during the meeting.</figcaption>
+        </figure>
+
+        <h3>Audio Recording</h3>
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Recording</h3>
+        <video width="320" height="240" controls>
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <section id="form">
+        <h2>Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" /><br /><br />
+
+            <label for="experience">How was your experience?</label>
+            <textarea id="experience" name="experience" rows="4" cols="40"></textarea><br /><br />
+
+            <label for="rating">Rate the meeting:</label><br />
+            <input type="radio" id="good" name="rating" value="good" />
+            <label for="good">Good</label><br />
+            <input type="radio" id="okay" name="rating" value="okay" />
+            <label for="okay">Okay</label><br />
+            <input type="radio" id="bad" name="rating" value="bad" />
+            <label for="bad">Bad</label><br /><br />
+
+            <label for="date">Meeting Date:</label>
+            <input type="date" id="date" name="date" /><br /><br />
+
+            <label for="mood">How are you feeling?</label>
+            <input list="moods" name="mood" id="mood" />
+            <datalist id="moods">
+              <option value="Happy"></option>
+              <option value="Neutral"></option>
+              <option value="Stressed"></option>
+            </datalist><br /><br />
+
+            <label><input type="checkbox" name="followup" /> I want to be contacted for follow-up</label><br /><br />
+
+            <label for="role">Your Role:</label>
+            <select id="role" name="role">
+              <option value="dev">Developer</option>
+              <option value="pm">Project Manager</option>
+              <option value="des">Designer</option>
+            </select><br /><br />
+
+            <button type="submit">Submit Feedback</button>
+          </fieldset>
+        </form>
+      </section>
+
+    </footer>
+
+    <!-- Required tags for lab -->
+    <div></div>
+    <span></span>
+  </body>
+</html>
