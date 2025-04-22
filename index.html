@@ -5,6 +5,36 @@
     <meta name="description" content="Meeting Minutes for Pomodoro Timer Brainstorm">
     <title>Pomodoro Timer First Brainstorm - Meeting Minutes</title>
     <link rel="icon" href="favicon.ico">
+    <!-- Google Fonts import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS with <style> -->
+    <style>
+      .summary-text {
+        font-weight: bold;
+        color: navy;
+        text-decoration: underline;
+      }
+      
+      #media h3 {
+        background-color: #e6f2ff;
+        padding: 0.5em;
+        border-left: 4px solid #6699cc;
+      }
+      
+      .card.highlight {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+      }
+      
+      .card.highlight:hover {
+        transform: translateY(-5px);
+      }
+    </style>
   </head>
 
   <body>
@@ -27,7 +57,7 @@
     </header>
 
     <main>
-      <section id="attendance">
+      <section id="attendance" class="card">
         <h2>Attendance</h2>
         <ul>
           <li><strong>John Doe</strong> (Team Lead)</li>
@@ -37,7 +67,7 @@
         </ul>
       </section>
 
-      <section id="agenda">
+      <section id="agenda" class="card">
         <h2>Agenda</h2>
         <ol>
           <li>Discuss features of the Pomodoro timer</li>
@@ -46,33 +76,42 @@
         </ol>
       </section>
 
-      <section id="old-business">
+      <section id="old-business" class="card">
         <h2>Old Business</h2>
         <p>Finalize scope of product.</p>
       </section>
 
-      <section id="new-business">
-        <h2>New Business</h2>
-        <p>
-          We decided to use <b>local storage</b>.
-          Also discussed possible integration with <i>Google Calendar</i>.
-        </p>
-      </section>
+      <div class="section-container">
+        <section id="new-business" class="card">
+          <h2>New Business</h2>
+          <div>
+            <p>
+              We decided to use <b>local storage</b>.
+            </p>
+          </div>
+          <div>
+            <p>
+              Also discussed possible integration with <i>Google Calendar</i>.
+            </p>
+          </div>
+        </section>
+      </div>
 
-      <section id="misc">
+      <section id="misc" class="card highlight">
         <h2>Miscellaneous</h2>
         <p>Dark mode version? — John</p>
         <p>API for motivational quotes? — Karen.</p>
         <details>
-          <summary>Click to reveal Jane's quote of the day</summary>
+          <summary class="summary-text">Click to reveal Jane's quote of the day</summary>
           <p><q>Start early, start often!</q></p>
         </details>
       </section>
 
-      <section id="media">
+      <section id="media" class="card">
         <h2>Diagrams & Media</h2>
         <figure>
-          <img src="picture.png" alt="Sketch of Pomodoro timer structure" width="400">
+          <!-- Inline CSS -->
+          <img src="picture.png" alt="Sketch of Pomodoro timer structure" width="400" style="border: 3px dashed #3c00ff; padding: 5px; background-color: #f0f0f0;">
           <figcaption>Initial architecture diagram sketched during the meeting.</figcaption>
         </figure>
 
@@ -92,7 +131,7 @@
 
     <footer>
       <hr>
-      <section id="form">
+      <section id="form" class="important">
         <h2>Feedback Form</h2>
         <form>
           <fieldset>
@@ -140,7 +179,7 @@
     </footer>
 
     <!-- Required tags for lab -->
-    <div></div>
-    <span></span>
+    <div class="card"></div>
+    <span class="inline-element"></span>
   </body>
 </html>
