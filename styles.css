@@ -1,0 +1,303 @@
+/* CSS Comments - This is the main stylesheet for the Pomodoro Timer Meeting Minutes page */
+
+/* CSS Variables with fallbacks */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --accent-color: #3c00ff;
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+    --border-radius: 8px;
+  }
+  
+  /* Universal Selector */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Element Selector */
+  body {
+    font-family: var(--body-font, sans-serif);
+    background-color: var(--bg-color, white);
+    color: var(--text-color, black);
+    line-height: 1.6;
+    padding: 20px;
+    /* Absolute unit */
+    max-width: 1200px;
+    /* Relative unit */
+    margin: 0 auto;
+  }
+  
+  /* Element Selector - Long hand margin */
+  header {
+    margin-top: 2rem;      /* Relative unit */
+    margin-right: 1rem;    /* Relative unit */
+    margin-bottom: 3rem;   /* Relative unit */
+    margin-left: 1rem;     /* Relative unit */
+    background-color: rgba(255, 255, 255, 0.9); /* RGBA color */
+    border-radius: var(--border-radius);
+    /* Box Shadow */
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1); /* HSLA color */
+  }
+  
+  /* Element Selector - Short hand padding */
+  main {
+    padding: 2em 3em 2em 3em; /* Relative unit - top right bottom left */
+    background-color: white;
+    border-radius: var(--border-radius);
+    min-height: 70vh; /* Relative unit */
+  }
+  
+  /* Element + Class Selector with short hand border */
+  h1 {
+    color: var(--primary-color, blue); /* CSS variable with fallback */
+    text-align: center;
+    font-family: var(--heading-font, sans-serif);
+    border: 2px solid var(--accent-color, pink); /* Short hand border */
+    padding: 10px; /* Absolute unit */
+    background-color: #f0f0f0; /* Hex color */
+  }
+  
+  /* Element Selector with long hand border */
+  h2 {
+    color: var(--secondary-color, purple);
+    font-family: var(--heading-font, sans-serif);
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: var(--accent-color, pink);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  /* ID Selector */
+  #attendance {
+    background-color: #e9ecef; /* Hex color */
+    padding: 15px; /* Absolute unit */
+    border-radius: var(--border-radius);
+    margin-bottom: 20px; /* Absolute unit */
+  }
+  
+  /* Class selector */
+  .section-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem; /* Relative unit */
+  }
+  
+  /* Descendant Combinator */
+  section ul {
+    list-style-type: square;
+    padding-left: 2em;
+  }
+  
+  /* Child Combinator */
+  nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  /* Adjacent Sibling Combinator */
+  h2 + p {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  /* General Sibling Combinator */
+  h3 ~ p {
+    font-style: italic;
+    line-height: 1.5;
+  }
+  
+  /* Attribute Selector */
+  [id^="section"] {
+    padding: 1em;
+    background-color: #f8f9fa;
+  }
+  
+  /* Pseudo-class selectors */
+  a:hover {
+    color: var(--accent-color, pink);
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: orange; /* Named color */
+  }
+  
+  /* Selector List */
+  h1, h2, h3 {
+    margin-top: 1em;
+  }
+  
+  /* Combining Two Selectors */
+  section.important {
+    border-left: 5px solid var(--accent-color, pink);
+    padding-left: 15px;
+  }
+  
+  /* Display property examples */
+  nav a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--primary-color, blue);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+  }
+  
+  footer {
+    display: block;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Position property examples */
+  header {
+    position: relative;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color, white);
+    z-index: 100;
+  }
+  
+  /* Flexbox layout */
+  #agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  
+  /* Grid layout */
+  #new-business {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    padding: 1em;
+  }
+  
+  /* New :has() selector */
+  section:has(h3) {
+    padding-top: 1em;
+    background-color: #f0f4f8;
+  }
+  
+  /* Using nested selectors */
+  @media (min-width: 768px) {
+    #form {
+      & form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 1em;
+        
+        & fieldset {
+          padding: 1em;
+          border-radius: var(--border-radius);
+        }
+      }
+    }
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    
+    main {
+      padding: 1em;
+    }
+    
+    nav > ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #new-business {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-container {
+      flex-direction: column;
+    }
+  }
+  
+  /* Wider-gamut color using color() function */
+  #misc {
+    background-color: color(display-p3 0.9 0.95 1);
+    padding: 1em;
+  }
+  
+  /* color-mix example */
+  details {
+    background-color: color-mix(in srgb, var(--primary-color) 20%, white);
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: var(--border-radius);
+  }
+  
+  /* Width and height properties */
+  figure {
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    height: auto;
+    margin: 1em auto;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+  
+  /* Form styling */
+  form {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: white;
+    border-radius: var(--border-radius);
+  }
+  
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  
+  input[type="text"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: var(--primary-color, blue);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 80%, black);
+  }
